@@ -1,7 +1,7 @@
 {
-  "name": "module",
-  "title": "New Module",
-  "description": "",
+  "name": "conditional-macros",
+  "title": "Conditional Macros",
+  "description": "Lets users define macros with toggleable modifiers. For example, a rogue may create a macro which asks them whether or not to apply Sneak Attack each time, or a Warlock may make a macro which prompts for Hex.",
   "version": "This is auto replaced",
   "library": "false",
   "manifestPlusVersion": "1.0.0",
@@ -9,22 +9,14 @@
   "compatibleCoreVersion": "9",
   "authors": [
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+      "name": "2CATteam",
+      "url": "https://github.com/2CATteam/",
+      "discord": "2CATteam#5574",
+      "email": "2CATteam@gmail.com"
     }
-  ],
-  "dependencies": [
-
-  ],
-  "conflicts": [
-    
   ],
   "esmodules": [
     "scripts/module.js"
-  ],
-  "scripts": [
-    "scripts/lib/lib.js"
   ],
   "styles": [
     "styles/module.css"
@@ -42,9 +34,5 @@
   "license": "LICENSE",
   "readme": "README.md",
   "media": [
-    {
-      "type": "icon",
-      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
-    }
   ]
 }

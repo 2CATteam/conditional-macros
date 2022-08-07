@@ -1,0 +1,25 @@
+<form>
+    <ol class="directory-list cm-noPadding">
+        {{#each macros}}
+            <li class="directory-item flexrow" data-macro-id="{{id}}">
+                <h4 class="cm-noMargin" style="line-height: 48px">{{name}}</h4>
+                <button type="button" title="{{localize "CONDITIONAL-MACROS.roll-button"}}" class="flex0" data-action="roll">
+                    <i class="fas fa-dice cm-noMargin"></i>
+                </button>
+                <button type="button" title="{{localize "CONDITIONAL-MACROS.add-shortcut"}}" class="flex0" data-action="shortcut">
+                    <i class="fas fa-plus-square cm-noMargin"></i>
+                </button>
+                <button type="button" title="{{localize "CONDITIONAL-MACROS.edit-macro"}}" class="flex0" data-action="edit">
+                    <i class="fas fa-edit cm-noMargin"></i>
+                </button>
+                <button type="button" title="{{localize "CONDITIONAL-MACROS.delete-macro"}}" class="flex0" data-action="delete">
+                    <i class="fas fa-trash cm-noMargin"></i>
+                </button>
+            </li>
+        {{/each}}
+    </ol>
+
+    <button type="button" data-action="create">
+        <i class="fas fa-plus"></i> {{localize "CONDITIONAL-MACROS.add-macro"}}
+    </button>
+</form>

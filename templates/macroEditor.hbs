@@ -1,0 +1,55 @@
+<form data-macro-id="{{macro.id}}">
+    {{log this}}
+    <label>{{localize "CONDITIONAL-MACROS.macro-name-label"}}
+        <input type="text" value="{{macro.name}}" name="{{macro.id}}.name" data-dtype="String"/>
+    </label>
+    <label style="vertical-align: middle">
+        <input type="checkbox" name="{{macro.id}}.isDamage" data-dtype="Boolean" {{checked macro.isDamage}}/>
+        {{localize "CONDITIONAL-MACROS.is-damage"}}
+    </label>
+    <h3 style="margin-top: .5rem">{{localize "CONDITIONAL-MACROS.components-label"}}</h3>
+    <hr>
+    <ol class="directory-list cm-noPadding">
+        {{#each macro.components}}
+            {{log this}}
+            <li class="directory-item flexrow" data-component-id="{{this.id}}" style="margin-bottom: 2rem">
+                <div>
+                    <input type="text" value="{{this.name}}" name="{{../macro.id}}.components.{{this.id}}.name" data-dtype="String"/>
+                    <br/>
+                    <label>
+                        {{localize "CONDITIONAL-MACROS.component-roll"}}
+                        <input type="text" value="{{this.roll}}" name="{{../macro.id}}.components.{{this.id}}.roll" data-dtype="String" style="width: auto"/>
+                    </label>
+                    <br/>
+                    <label>
+                        <input type="checkbox" name="{{../macro.id}}.components.{{this.id}}.defaultOn" data-dtype="Boolean" {{checked this.defaultOn}}/>
+                        {{localize "CONDITIONAL-MACROS.default-on"}}
+                    </label>
+                    <br/>
+
+                    {{#if ../macro.isDamage}}
+                        <label>
+                            {{localize "CONDITIONAL-MACROS.damage-type"}}
+                            <input type="text" value="{{this.type}}" name="{{../macro.id}}.components.{{this.id}}.type" data-dtype="String" style="width: auto"/>
+                        </label>
+                    {{else}}
+                        <label>
+                            <input type="checkbox" name="{{../macro.id}}.components.{{this.id}}.advAffects" data-dtype="Boolean" {{checked this.advAffects}}/>
+                            {{localize "CONDITIONAL-MACROS.adv-affects"}}
+                        </label>
+                    {{/if}}
+                    <br/>
+                    <button type="button" title="{{localize "CONDITIONAL-MACROS.delete-macro-component"}}" class="flex0" data-action="delete">
+                        <i class="fas fa-trash cm-noMargin"></i>
+                    </button>
+                </div>
+            </li>
+        {{else}}
+            <p>{{localize "CONDITIONAL-MACROS.no-components"}}</p>
+        {{/each}}
+    </ol>
+
+    <button type="button" data-action="create">
+        <i class="fas fa-plus"></i> {{localize "CONDITIONAL-MACROS.add-macro-component"}}
+    </button>
+</form>

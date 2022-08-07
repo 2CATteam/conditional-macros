@@ -1,0 +1,15 @@
+<form data-macro-id="{{macro.id}}">
+    <h2>{{macro.name}}</h2>
+    <h3 style="margin-top: .5rem">{{localize "CONDITIONAL-MACROS.components-label"}}</h3>
+    <hr>
+    <ol class="directory-list">
+        {{#each macro.components}}
+            <li class="directory-item flexrow" data-component-id="{{this.id}}">
+                <label>
+                    <input type="checkbox" name="{{this.id}}" data-dtype="Boolean" {{checked this.defaultOn}}/>
+                    {{this.name}} ({{this.roll}})
+                </label>
+            </li>
+        {{/each}}
+    </ol>
+</form>

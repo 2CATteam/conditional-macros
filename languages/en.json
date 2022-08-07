@@ -1,3 +1,25 @@
 {
-    "MODULE.hello": "hello"
+    "CONDITIONAL-MACROS": {
+        "button-title": "Conditional Macros",
+        "roll-button": "Roll this macro",
+        "add-shortcut": "Add a shortcut to bar below",
+        "edit-macro": "Edit this macro",
+        "delete-macro": "Delete this macro",
+        "add-macro": "Create a new Conditional Macro",
+        "is-damage": "This macro represents a damage roll",
+        "macro-name-label": "Macro name:",
+        "add-macro-component": "Add a new Macro Component",
+        "delete-macro-component": "Delete this Component",
+        "components-label": "Components:",
+        "no-components": "No components. Add one below",
+        "component-roll": "Dice formula:",
+        "default-on": "Defaults to on",
+        "damage-type": "Damage type:",
+        "adv-affects": "Affected by (dis)advantage",
+        "normal-damage": "Normal",
+        "critical-damage": "Critical Hit",
+        "normal-roll": "Normal",
+        "adv-roll": "Advantage",
+        "disadv-roll": "Disadvantage"
+    }
 }
